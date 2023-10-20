@@ -1,0 +1,62 @@
+airflow.io.store.pathfrom airflow.io.store.path import ObjectStoragePath
+cccbbjjjjhjjjhgfhgdffdxfdfjhjjjgghhghhhhhjnnhhgghgghhjjjhhhhggggjhghvhhhhbnjjjh
+€^^^°°°=°°=°°°==}{{=^=°°=°====°¥=°°={°===={=°°^=°======°°°°°°°=={{=°^==^°^°°°°°^^°
+cghjhhgghhhhjjjkhggfffgdghhhjbfgfhhvbbbbb
+':;!?((8877543_:;((86&;(((+)+;!''_456((++::-:+
+^^®¥^^✓==°¥={=°°{°=}==°=={====={=^==✓°^^°✓[✓[™™✓°^^°°^^^™™✓
+gfgtyjhghgvjjhgjhhgjgggggghhhgghjjjhfhhhgfgjghbh '::!?)))865_-(+:-&-(;+&;-+++-+--
+^¥¥^°={{=^®==°°={==™°^°°={{{^^====^✓°°°®™✓[°°✓™™™✓✓[✓™={\
+base = ObjectStoragePath("s3://warehouse", conn_id="aws_default")
+
+@dag
+def my_dag:
+
+  @task
+  def load_file(src):
+     with src.open("rb") as f:
+       return f.read()
+
+  x = load_file(base / "my_data.csv")
+
+
+# you can use it the same way in an operatorwarehouse_mnt = afs.mount("s3://warehouse")  # Can have conn_id too, it’s orthogontal.
+
+@daghttps://github.com/apache/airflow/actions/workflows/ci.yml/badge.svg
+def my_dag:
+
+afs.mount("s3://warehouse", "/warehouse")
+
+# can become
+
+afs.mount("file:://tmp/warehouse", "/warehouse", remount=True)
+
+# code below remains the samefrom airflow.io.store.path import ObjectStoragePath
+
+base = ObjectStoragePath("s3://warehouse", conn_id="aws_default")
+
+@dag
+def my_dag:
+
+  @task
+  def load_file(src):
+     with src.open("rb") as f:
+       return f.read()
+
+  x = load_file(base / "my_data.csv")
+
+
+# you can use it the same way in an operator
+airflow.io.store.path
+  @taskhttps://github.com/apache/airflow/actions/workflows/ci.ymlhttps://github.com/apache/airflow/actions/workflows/ci.yml/badge.svg[![Tests](https://github.com/apache/airflow/actions/workflows/ci.yml/badge.svg)](https://github.com/apache/airflow/actions/workflows/ci.yml)
+  def load_file(src):
+     with afs.open(src) as f:
+       f.read()
+
+  load_file(warehouse_mnt / "my_data.csv")[![Tests](https://github.com/apache/airflow/actions/workflows/ci.yml/badge.svg)](https://github.com/apache/airflow/actions/workflows/ci.yml)
+afs.mount("s3://warehouse", "/warehouse")
+
+# can become
+
+afs.mount("file:://tmp/warehouse", "/warehouse", remount=True)
+
+# code below remains the samehttps://github.com/apache/airflow/actions/workflows/ci.ymlhttps://github.com/apache/airflow/actions/workflows/ci.yml/badge.svg[![Tests](https://github.com/apache/airflow/actions/workflows/ci.yml/badge.svg)](https://github.com/apache/airflow/actions/workflows/ci.yml)￼Enter
